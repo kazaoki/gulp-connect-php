@@ -1,14 +1,13 @@
 {
   "name": "gulp-connect-php-mb-path",
-  "version": "1.0.3.1",
+  "version": "0.0.1",
   "description": "Starts a php server",
   "main": "index-compat.js",
   "scripts": {
     "__anchor": "cd .",
     "test-compat": "npm run __anchor; mocha ./test",
     "test-normative": "npm run __anchor; GCP_ES6=1 mocha ./test",
-    "test": "npm run test-normative; npm run test-compat",
-    "prepack": "npm run __anchor; ./convert.sh"
+    "test": "npm run test-normative; npm run test-compat"
   },
   "repository": {
     "type": "git",
