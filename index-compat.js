@@ -161,7 +161,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.workingPort = options.port;
           var host = options.hostname + ':' + options.port;
-          var args = ['-S', host, '-t', options.base];
+          var args = ['-S', host];
 
           if (options.ini) {
             args.push('-c', options.ini);
@@ -206,7 +206,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (exists === true) {
                 self.status = Status.STARTING;
                 self.childProcess = spawn(options.bin, args, {
-                  cwd: '.',
+                  cwd: options.base,
                   stdio: options.stdio
                 });
               } else {

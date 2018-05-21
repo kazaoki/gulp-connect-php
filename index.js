@@ -144,7 +144,7 @@
 
         this.workingPort = options.port;
         const host = options.hostname + ':' + options.port;
-        const args = ['-S', host, '-t', options.base];
+        const args = ['-S', host];
 
         if (options.ini) {
           args.push('-c', options.ini);
@@ -189,7 +189,7 @@
             if (exists === true) {
               self.status = Status.STARTING;
               self.childProcess = spawn(options.bin, args, {
-                cwd: '.',
+                cwd: options.base,
                 stdio: options.stdio
               });
             }

@@ -1,5 +1,5 @@
 {
-  "name": "gulp-connect-php",
+  "name": "gulp-connect-php-mb-path",
   "version": "1.0.3",
   "description": "Starts a php server",
   "main": "index-compat.js",
